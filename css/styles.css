@@ -102,7 +102,7 @@ body {
     max-width: 100%;
     height: 150px;
     border-radius: 100px;
-    background-color: green;
+    background: green;
 }
 
 .dados-rgb {
@@ -146,6 +146,14 @@ h1 {
 .blue {
     /* background-color: #4F579E; */
     background-color: blue;
+}
+
+input {
+    width: 100px;
+    max-width: 100%;
+    border: none;
+    border-radius: 50px;
+    padding: 5px;
 }
 
 @media screen and (max-width: 600px) {
