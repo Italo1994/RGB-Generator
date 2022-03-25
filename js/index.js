@@ -24,9 +24,17 @@ setInterval(() => {
 
 function alteraData() {
     let date = new Date();
+
+    let d = date.getDay().toString();
+    let dFormat = (d.length == 1) ? '0'+d : d;
+    let m = date.getMonth().toString();
+    let mFormat = (m.length == 1) ? '0'+m : m;
+    let a = date.getFullYear().toString();
+    let aFormat = (a.length == 1) ? '0'+a : a;
+
     let idDate = document.getElementById("data");
 
-    idDate.innerHTML = date;
+    idDate.innerHTML = dFormat+'/'+mFormat+'/'+aFormat;
 }
 
 let red = document.querySelector("#number-red");
