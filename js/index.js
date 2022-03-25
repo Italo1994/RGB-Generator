@@ -6,14 +6,6 @@ let boxRed = document.getElementsByClassName("box-selector")[0];
 let boxGreen = document.getElementsByClassName("box-selector")[1];
 let boxBlue = document.getElementsByClassName("box-selector")[2];
 
-// const propriedades = boxRed.getBoundingClientRect(); // conjuntos de propriedades da progress bar
-// const largura = propriedades.width; // largura da progress bar
-
-// let posicaoInicialRed = progressRed.style.left;
-
-// boxRed.addEventListener("mousemove", dragMove);
-// boxRed.addEventListener("mouseup", dragEnd);
-
 function dragMove(e) {
     if(boxRed.style.left > boxRed.style.left-1) {
         boxRed.style.left += 1 +'px';
@@ -26,9 +18,16 @@ function dragEnd() {
 
 }
 
-// console.log(posicaoInicialRed)
+setInterval(() => {
+    alteraData();
+}, 1000);
 
+function alteraData() {
+    let date = new Date();
+    let idDate = document.getElementById("data");
 
+    idDate.innerHTML = date;
+}
 
 let red = document.querySelector("#number-red");
 red.addEventListener("change", exibeValor);
@@ -72,6 +71,4 @@ function alteraCorCirculo(r, g, b) {
     let circulo = document.querySelector("#circulo");
     let cor = `rgb(${r},${g},${b})`;
     circulo.style.backgroundColor = cor;
-    // circulo.style.background = `rgb(${r},${g},${b})`;
-    // alert(circulo.style.background);
 }
