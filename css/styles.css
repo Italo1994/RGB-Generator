@@ -134,17 +134,14 @@ h1 {
 
 /* ==== COLORS ==== */
 .red {
-    /* background-color: #F57F7E; */
     background-color: red;
 }
 
 .green {
-    /* background-color: #54B73E; */
     background-color: green;
 }
 
 .blue {
-    /* background-color: #4F579E; */
     background-color: blue;
 }
 
@@ -160,5 +157,7 @@ input {
     .container {
         width: 450px;
         height: 500px;
+        margin: 0 auto;
+        padding: 10px;
     }
 }
